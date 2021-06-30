@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMKM Credit Scoring</title>
+    <link rel='stylesheet' href='./style.css' />
+  </head>
+  <body>
+    <!-- appbar -->
+    <div class='appbar'> 
+      <p> Credit Scoring UMKM </p>
+    </div>
+    <div class="content" >
+      <div class="img-wrapper">
+        <img src='LogoBOS.png' class="image">
+      </div>
+      <div class='card' id='subtitle'>
+        <p class='sub-title'>Personal </p>
+      </div>
+      <!-- main -->
+      <div class='wrapper'>
+        <!-- Data Diri -->
+        <div class='section show' id='personal-field'>
+          <!-- disclaimer -->
+          <div class='card' id='disclaimer'>
+            <p>DISCLAIMER!!!</p>
+            <p>Simulator ini bersifat edukatif.</p>
+            <p>Hasil yang ditampilkan hanya perkiraan. Kami tidak bertanggungjawab apabila menimbulkan akibat hukum bagi pengguna.</p>
+          </div>
+          <!-- main -->
+          <div class='card'>
+            <!-- Name -->
+            <div class='field'>
+              <p class='label'>Nama</p>
+              <input class='input' placeholder='Nama' id='name' />
+            </div>
+            <!-- Gender -->
+            <div class='field'>
+              <p class='label'>Jenis Kelamin</p>
+              <select class='select' id='gender'>
+                <option value='Laki-laki'>Laki-laki</option>
+                <option value='Perempuan'>Perempuan</option>
+              </select>
+            </div>
+            <!-- Email -->
+            <div class='field'>
+              <p class='label'>Email</p>
+              <input class='input' placeholder='Email' id='email' />
+            </div>
+            <!-- Phone -->
+            <div class='field'>
+              <p class='label'>Nomor Ponsel</p>
+              <input class='input' placeholder='Nomor Ponsel' id='phone' />
+            </div>
+            <!-- Province -->
+            <div class='field'>
+              <p class='label'>Provinsi</p>
+              <select class='select' id='province'></select>
+            </div>
+            <!-- Domicile -->
+            <div class='field'>
+              <p class='label'>Domisili</p>
+              <select class='select' id='domicile'></select>
+            </div>
+            <!-- DoB (Date of Birth) -->
+            <div class='field'>
+              <p class='label'>Tanggal Lahir</p>
+              <select class='select' id='dob-year'></select>
+              <select class='select' id='dob-month'></select>
+              <select class='select' id='dob-date'></select>
+            </div>
+            <!-- Company Name -->
+            <div class='field'>
+              <p class='label'>Nama Perusahaan</p>
+              <input class='input' placeholder='Nama Perusahaan' id='company-name' />
+            </div>
+            <!-- Company Province -->
+            <div class='field'>
+              <p class='label'>Provinsi Perusahaan</p>
+              <select class='select' id='company-province'></select>
+            </div>
+            <!-- Company Domicile -->
+            <div class='field'>
+              <p class='label'>Domisili Perusahaan</p>
+              <select class='select' id='company-domicile'></select>
+            </div>
+            <!-- Company Email -->
+            <div class='field'>
+              <p class='label'>Email Perusahaan</p>
+              <input class='input' placeholder='Email Perusahaan' id='company-email' />
+            </div>
+            <!-- Company Phone -->
+            <div class='field'>
+              <p class='label'>Nomor Telepon Perusahaan</p>
+              <input class='input' placeholder='Nomor Telepon Perusahaan' id='company-phone' />
+            </div>
+            <!-- -->
+          </div>
+        </div>
+        <!-- Karakter -->
+        <div class='section' id='credit-character-field'>
+          <div class='card'>
+            <!-- Age -->
+            <div class='field'>
+              <p class='label'>Usia</p>
+              <select class='select' id='age'></select>
+            </div>
+            <!-- Education -->
+            <div class='field'>
+              <p class='label'>Pendidikan</p>
+              <select class='select' id='education'></select>
+            </div>
+            <!-- Marriage -->
+            <div class='field'>
+              <p class='label'>Pernikahan</p>
+              <select class='select' id='marriage'></select>
+            </div>
+            <!-- Dependent -->
+            <div class='field'>
+              <p class='label'>Tanggungan</p>
+              <select class='select' id='dependent'></select>
+            </div>
+            <!-- Online shopping -->
+            <div class='field'>
+              <p class='label'>Belanja online 6 bulan terakhir</p>
+              <select class='select' id='online-shopping'></select>
+            </div>
+            <!-- Online shopping 1th -->
+            <div class='field'>
+              <p class='label'>Belanja online 1 tahun terakhir</p>
+              <select class='select' id='online-shopping-1th'></select>
+            </div>
+            <!-- Credit Card -->
+            <div class='field'>
+              <p class='label'>Kartu Kredit</p>
+              <select class='select' id='credit-card'></select>
+            </div>
+            <!-- Insurance -->
+            <div class='field'>
+              <p class='label'>Asuransi</p>
+              <select class='select' id='insurance'></select>
+            </div>
+            <!-- Investment -->
+            <div class='field'>
+              <p class='label'>Investasi</p>
+              <select class='select' id='investment'></select>
+            </div>
+            <!-- -->
+          </div>
+        </div>
+        <!-- Capacity -->
+        <div class='section' id='credit-capacity-field'>
+          <div class='card'>
+            <!-- Bidang Usaha -->
+            <div class='field'>
+              <p class='label'>Bidang Usaha</p>
+              <select class='select' id='bidangUsaha'></select>
+            </div>
+            <!-- Lama Usaha -->
+            <div class='field'>
+              <p class='label'>Lama Usaha</p>
+              <select class='select' id='lamaUsaha'></select>
+            </div>
+            <!-- Usaha Yang Dimiliki -->
+            <div class='field'>
+              <p class='label'>Usaha yang Dimiliki</p>
+              <select class='select' id='usahayangDimiliki'></select>
+            </div>
+            <!-- Total Pekerja -->
+            <div class='field'>
+              <p class='label'>Total Pekerja</p>
+              <select class='select' id='totalPekerja'></select>
+            </div>
+            <!-- Persaingan Usaha -->
+            <div class='field'>
+              <p class='label'>Persaingan Usaha</p>
+              <select class='select' id='persainganUsaha'></select>
+            </div>
+            <!-- Omset per bulan -->
+            <div class='field'>
+              <p class='label'>Omset per Bulan</p>
+              <select class='select' id='omsetperBulan'></select>
+            </div>
+            <!-- Omset per Tahun -->
+            <div class='field'>
+              <p class='label'>Omset per Tahun</p>
+              <select class='select' id='omsetperTahun'></select>
+            </div>
+            <!-- Pengeluaran per Bulan -->
+            <div class='field'>
+              <p class='label'>Pengeluaran per Bulan</p>
+              <select class='select' id='pengeluaranperBulan'></select>
+            </div>
+            <!-- Pengeluaran per Tahun -->
+            <div class='field'>
+              <p class='label'>Pengeluaran per Tahun</p>
+              <select class='select' id='pengeluaranperTahun'></select>
+            </div>
+            <!-- Penghasilan per Bulan -->
+            <div class='field'>
+              <p class='label'>Penghasilan per Bulan</p>
+              <select class='select' id='penghasilanperBulan'></select>
+            </div>
+            <!-- Total Pinjaman Aktif -->
+            <div class='field'>
+              <p class='label'>Total Pinjaman Aktif</p>
+              <select class='select' id='totalPinjamanAktif'></select>
+            </div>
+            <!-- Terakhir Pinjaman Disetujui -->
+            <div class='field'>
+              <p class='label'>Terakhir Pinjaman Disetujui</p>
+              <select class='select' id='terakhirPinjamanDisetujui'></select>
+            </div>
+            <!-- Jumlah Fasilitas Pinjaman -->
+            <div class='field'>
+              <p class='label'>Jumlah Fasilitas Pinjaman</p>
+              <select class='select' id='jumlahFasilitasPinjaman'></select>
+            </div>
+            <!-- Total Pinjaman Menunggak -->
+            <div class='field'>
+              <p class='label'>Total Pinjaman Menunggak</p>
+              <select class='select' id='totalPinjamanMenunggak'></select>
+            </div>
+            <!-- Waktu Maksimal Menunggak -->
+            <div class='field'>
+              <p class='label'>Waktu Maksimal Menunggak</p>
+              <select class='select' id='waktuMaksimalMenunggak'></select>
+            </div>
+            <!-- -->
+          </div>
+        </div>
+        <!-- Capital -->
+        <div class='section' id='credit-capital-field'>
+          <div class='card'>
+            <!-- Kepemilikan Tempat Usaha -->
+            <div class='field'>
+              <p class='label'>Kepemilikan Tempat Usaha</p>
+              <select class='select' id='kepemilikanTempatUsaha'></select>
+            </div>
+            <!-- Kepemilikan Aset -->
+            <div class='field'>
+              <p class='label'>Kepemilikan Aset</p>
+              <select class='select' id='kepemilikanAset'></select>
+            </div>
+            <!-- Modal untuk Usaha -->
+            <div class='field'>
+              <p class='label'>Modal Untuk Usaha</p>
+              <select class='select' id='modalUntukUsaha'></select>
+            </div>
+            <!-- Kepemilikan Modal -->
+            <div class='field'>
+              <p class='label'>Kepemilikan Modal</p>
+              <select class='select' id='kepemilikanModal'></select>
+            </div>
+            <!-- Pembiayaan Modal Usaha -->
+            <div class='field'>
+              <p class='label'>Pembiayaan Modal Usaha</p>
+              <select class='select' id='pembiayaanModalUsaha'></select>
+            </div>
+            <!-- Jangka Waktu Tabungan -->
+            <div class='field'>
+              <p class='label'>Jangka Waktu Tabungan</p>
+              <select class='select' id='jangkawaktuTabungan'></select>
+            </div>
+            <!-- Deposito per Bulan -->
+            <div class='field'>
+              <p class='label'>Deposito per Bulan</p>
+              <select class='select' id='depositoperBulan'></select>
+            </div>
+            <!-- Penarikan per Bulan -->
+            <div class='field'>
+              <p class='label'>Penarikan per Bulan</p>
+              <select class='select' id='penarikanperBulan'></select>
+            </div>
+            <!-- Total Balance Tabungan -->
+            <div class='field'>
+              <p class='label'>Total Balance Tabungan</p>
+              <select class='select' id='totalBalanceTabungan'></select>
+            </div>
+            <!-- Total Balance Deposito -->
+            <div class='field'>
+              <p class='label'>Total Balance Deposito</p>
+              <select class='select' id='totalBalanceDeposito'></select>
+            </div>
+            <!-- -->
+          </div>
+        </div>
+        <!-- Condition -->
+        <div class='section' id='credit-condition-field'>
+          <div class='card'>
+            <!-- Kondisi Usaha -->
+            <div class='field'>
+              <p class='label'>Kondisi Usaha</p>
+              <select class='select' id='kondisiUsaha'></select>
+            </div>
+            <!-- Kondisi Operasional 6 Bulan Terakhir -->
+            <div class='field'>
+              <p class='label'>Kondisi Operasional 6 Bulan Terakhir</p>
+              <select class='select' id='kondisiOperasional6BulanTerakhir'></select>
+            </div>
+            <!-- Kondisi Operasional 1 Tahun Terakhir -->
+            <div class='field'>
+              <p class='label'>Kondisi Operasional 1 Tahun Terakhir</p>
+              <select class='select' id='kondisiOperasional1TahunTerakhir'></select>
+            </div>
+            <!-- Kinerja Keuangan 6 Bulan Terakhir -->
+            <div class='field'>
+              <p class='label'>Kinerja Keuangan 6 Bulan Terakhir</p>
+              <select class='select' id='kinerjaKeuangan6BulanTerakhir'></select>
+            </div>
+            <!-- Kinerja Keuangan 1 Tahun Terakhir -->
+            <div class='field'>
+              <p class='label'>Kinerja Keuangan 1 Tahun Terakhir</p>
+              <select class='select' id='kinerjaKeuangan1TahunTerakhir'></select>
+            </div>
+            <!-- -->
+          </div>
+        </div>
+        <!-- Collateral -->
+        <div class='section' id='credit-collateral-field'>
+          <div class='card'>
+            <!-- Aset Jaminan -->
+            <div class='field'>
+              <p class='label'>Aset Jaminan</p>
+              <select class='select' id='asetJaminan'></select>
+            </div>
+            <!-- Kepemilikan Tanah -->
+            <div class='field'>
+              <p class='label'>Kepemilikan Tanah</p>
+              <select class='select' id='kepemilikanTanah'></select>
+            </div>
+            <!-- Penggunaan Tanah -->
+            <div class='field'>
+              <p class='label'>Penggunaan Tanah</p>
+              <select class='select' id='penggunaanTanah'></select>
+            </div>
+            <!-- Lokasi Tanah -->
+            <div class='field'>
+              <p class='label'>Lokasi Tanah</p>
+              <select class='select' id='lokasiTanah'></select>
+            </div>
+            <!-- Total Perolehan Jaminan Tanah-->
+            <div class='field'>
+              <p class='label'>Total Perolehan Jaminan Tanah</p>
+              <select class='select' id='totalPerolehanJaminanTanah'></select>
+            </div>
+            <!-- Kepemilikan Bangunan -->
+            <div class='field'>
+              <p class='label'>Kepemilikan Bangunan</p>
+              <select class='select' id='kepemilikanBangunan'></select>
+            </div>
+            <!-- Usia Bangunan -->
+            <div class='field'>
+              <p class='label'>Usia Bangunan</p>
+              <select class='select' id='usiaBangunan'></select>
+            </div>
+            <!-- Penggunaan Bangunan -->
+            <div class='field'>
+              <p class='label'>Penggunaan Bangunan</p>
+              <select class='select' id='penggunaanBangunan'></select>
+            </div>
+            <!-- Lokasi Bangunan -->
+            <div class='field'>
+              <p class='label'>Lokasi Bangunan</p>
+              <select class='select' id='lokasiBangunan'></select>
+            </div>
+            <!-- Total Perolehan Jaminan Bangunan-->
+            <div class='field'>
+              <p class='label'>Total Perolehan Jaminan Bangunan</p>
+              <select class='select' id='totalPerolehanJaminanBangunan'></select>
+            </div>
+            <!-- Kepemilikan Mesin dan Peralatan-->
+            <div class='field'>
+              <p class='label'>Kepemilikan Mesin dan Peralatan</p>
+              <select class='select' id='kepemilikanMesindanPeralatan'></select>
+            </div>
+            <!-- Usia Mesin dan Peralatan-->
+            <div class='field'>
+              <p class='label'>Usia Mesin dan Peralatan</p>
+              <select class='select' id='usiaMesindanPeralatan'></select>
+            </div>
+            <!-- Kondisi Mesin dan Peralatan-->
+            <div class='field'>
+              <p class='label'>Kondisi Mesin dan Peralatan</p>
+              <select class='select' id='kondisiMesindanPeralatan'></select>
+            </div>
+            <!-- Penggunaan Mesin dan Peralatan-->
+            <div class='field'>
+              <p class='label'>Penggunaan Mesin dan Peralatan</p>
+              <select class='select' id='penggunaanMesindanPeralatan'></select>
+            </div>
+            <!-- Total Perolehan Jaminan Mesin dan Peralatan-->
+            <div class='field'>
+              <p class='label'>Total Perolehan Jaminan Mesin dan Peralatan</p>
+              <select class='select' id='totalPerolehanJaminanMesindanPeralatan'></select>
+            </div>
+            <!-- Kepemilikan Kendaraan -->
+            <div class='field'>
+              <p class='label'>Kepemilikan Kendaraan</p>
+              <select class='select' id='kepemilikanKendaraan'></select>
+            </div>
+            <!-- Usia Kendaraan -->
+            <div class='field'>
+              <p class='label'>Usia Kendaraan</p>
+              <select class='select' id='usiaKendaraan'></select>
+            </div>
+            <!-- Kondisi Kendaraan -->
+            <div class='field'>
+              <p class='label'>Kondisi Kendaraan</p>
+              <select class='select' id='kondisiKendaraan'></select>
+            </div>
+            <!-- Jenis Kendaraan -->
+            <div class='field'>
+              <p class='label'>Jenis Kendaraan</p>
+              <select class='select' id='jenisKendaraan'></select>
+            </div>
+            <!-- Total Perolehan Jaminan Kendaraan -->
+            <div class='field'>
+              <p class='label'>Total Perolehan Jaminan Kendaraan</p>
+              <select class='select' id='totalPerolehanJaminanKendaraan'></select>
+            </div>
+            <!-- -->
+          </div>
+        </div>
+        <!-- Hasil Skor -->
+        <div class='section' id='credit-score'>
+          <div class='card'>
+            <!-- score -->
+            <div class='score-wrapper'>
+              <img src="ParameterBOS.png" class="image">
+              <div class='score-label'>Skor Kredit</div>
+              <div class='score-value' id='credit-score-value'></div>
+            </div>
+            <!-- personal data -->
+            <div class='personal-wrapper'>
+              <!-- Name -->
+              <div class='field'>
+                <p class='label'>Nama</p>
+                <p class='data-field' id='data-name'></p>
+              </div>
+              <!-- Gender -->
+              <div class='field'>
+                <p class='label'>Jenis Kelamin</p>
+                <p class='data-field' id='data-gender'></p>
+              </div>
+              <!-- Email -->
+              <div class='field'>
+                <p class='label'>Email</p>
+                <p class='data-field' id='data-email'></p>
+              </div>
+              <!-- Phone -->
+              <div class='field'>
+                <p class='label'>Nomor Ponsel</p>
+                <p class='data-field' id='data-phone'></p>
+              </div>
+              <!-- Province -->
+              <div class='field'>
+                <p class='label'>Provinsi</p>
+                <p class='data-field' id='data-province'></p>
+              </div>
+              <!-- Domicile -->
+              <div class='field'>
+                <p class='label'>Domisili</p>
+                <p class='data-field' id='data-domicile'></p>
+              </div>
+              <!-- Date of Birth (DoB) -->
+              <div class='field'>
+                <p class='label'>Tanggal Lahir</p>
+                <p class='data-field' id='data-dob'></p>
+              </div>
+              <!-- Company Name -->
+              <div class='field'>
+                <p class='label'>Nama Perusahaan</p>
+                <p class='data-field' id='data-company-name'></p>
+              </div>
+              <!-- Company Province -->
+              <div class='field'>
+                <p class='label'>Provinsi Perusahaan</p>
+                <p class='data-field' id='data-company-province'></p>
+              </div>
+              <!-- Company Domicile -->
+              <div class='field'>
+                <p class='label'>Domisili Perusahaan</p>
+                <p class='data-field' id='data-company-domicile'></p>
+              </div>
+              <!-- Company Email -->
+              <div class='field'>
+                <p class='label'>Email Perusahaan</p>
+                <p class='data-field' id='data-company-email'></p>
+              </div>
+              <!-- Company Phone -->
+              <div class='field'>
+                <p class='label'>Nomor Telepon Perusahaan</p>
+                <p class='data-field' id='data-company-phone'></p>
+              </div>
+              <!-- -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <!-- bottombar -->
+    <div class='bottombar'>
+      <button class='button disabled hidden' id='prev-btn'>Prev</button>
+      <button class='button disabled' id='next-btn'>Next</button>
+    </div>
+    <script src='./script.js'></script>
+  </body>
+</html>
