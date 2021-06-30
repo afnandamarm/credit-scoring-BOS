@@ -394,7 +394,7 @@
       'Kab. Yalimo',
       'Kota. Jayapura'
     ]],
-    [24, '92', 'Papua Barat', [
+    [24, 'Papua Barat', [
       'Kab. Fakfak',
       'Kab. Kaimana',
       'Kab. Manokwari',
@@ -2547,7 +2547,7 @@
         if (state.section === 'personal-field') {
           personalFieldSection.classList.remove('show')
           creditCharacterFieldSection.classList.add('show')
-          // nextBtn.classList.add('disabled')
+          nextBtn.classList.add('disabled')
           prevBtn.classList.remove('disabled')
           prevBtn.classList.remove('hidden')
           state.section = 'credit-character-field'
